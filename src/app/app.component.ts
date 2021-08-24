@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+//let displayDashboard = true;
+
 export class AppComponent {
   title = 'portfolioManagerClient';
 }
