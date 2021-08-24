@@ -1,12 +1,49 @@
 #overview {
-    background-color: pink;
+    /* background-color: pink; */
     height: 100%;
+    display: grid;
+    grid-template-rows: 23% 32% 45%;
 }
 
 #logo{
     font-family: "Futura";
+    color: #D18334;
+    /* padding-bottom: 15px; */
 }
 
 #username{
     font-family: "Futura";
+    font-weight: bold;
+    font-size: 27px;
+}
+
+#valueSummary {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+}
+
+#valueNames {
+    font-family: "Futura";
+    padding-bottom: 7px;
+}
+
+#valueNetWorth {
+    font-family: "Futura";
+    color: #94B253;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+#valueCash {
+    font-family: "Futura";
+    color: #516B9D;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#valueInvestment {
+    font-family: "Futura";
+    color: #8BC0DE;
+    font-weight: bold;
+    font-size: 25px;
 }
