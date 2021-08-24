@@ -1,0 +1,63 @@
+#buttonsAndLegends {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+#buttons{
+    margin-top: 2%;
+}
+
+#button{
+    border-width: 0;
+    background-color: #F4982C;
+    font-family: "Futura";
+    font-weight: bold;
+    color: white;
+    font-size: 8px;
+    padding: 12px 14px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    margin-right: 2.5%;
+}
+
+#button:hover {
+    background-color: #BA731F; /* Green */
+    color: white;
+  }
+
+#legends {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-top: 8%
+}
+
+#legendWrappers {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+#circleNet {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: #94B253;
+}
+
+#circleCash {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: #516B9D;
+}
+
+#circleInvestment {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: #8BC0DE;
+}
+
+#legendName {
+    font-family: "Futura";
+
+}
