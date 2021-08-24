@@ -1,0 +1,6 @@
+#dashboard {
+    background-color: pink;
+    height:100vh;
+    display: grid;
+    grid-template-rows: 25% 40% 35%;
+}
