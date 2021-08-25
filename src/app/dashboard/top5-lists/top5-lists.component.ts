@@ -9,6 +9,8 @@ export class Top5ListsComponent implements OnInit {
 
   constructor() { }
 
+  gain = "Top 5 Gainers";
+  loss = "Top 5 Losers";
   ngOnInit(): void {
   }
 

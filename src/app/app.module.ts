@@ -9,6 +9,7 @@ import { OverviewComponent } from './dashboard/overview/overview.component';
 import { ChartComponent } from './dashboard/chart/chart.component';
 import { Top5ListsComponent } from './dashboard/top5-lists/top5-lists.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { ListComponent } from './dashboard/top5-lists/list/list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AccountsComponent } from './accounts/accounts.component';
     OverviewComponent,
     ChartComponent,
     Top5ListsComponent,
-    AccountsComponent
+    AccountsComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

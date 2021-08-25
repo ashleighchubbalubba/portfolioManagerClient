@@ -1,4 +1,13 @@
-<p>top5-lists works!</p>
-<!-- <nav>
-    <a routerLink='/stock-page'>ALL STOCKS</a> 
-</nav> -->
+<article id = "top5lists">
+    <div id = "twoLists">
+        <app-list [title] = "gain" [isGain] = true></app-list>
+        <app-list [title] = "loss" [isGain] = false></app-list>
+    </div>
+    <div id = "allStocksButtonWrapper">
+        <div></div>
+        <nav>
+            <button id ="allStocksButton" routerLink='/stock-page'>ALL STOCKS</button> 
+        </nav>
+    </div>
+</article>
+

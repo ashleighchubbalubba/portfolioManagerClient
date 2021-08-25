@@ -23,7 +23,7 @@
 #button:hover {
     background-color: #BA731F; /* Green */
     color: white;
-  }
+}
 
 #legends {
     display: grid;
