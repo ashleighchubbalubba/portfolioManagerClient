@@ -1,0 +1,53 @@
+#section {
+    height: 100%;
+}
+
+#accountTitle {
+    font-family: "Futura";
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 7%;
+    /* margin-left: 10%; */
+}
+
+#accountBalance {
+    font-family: "Futura";
+    font-weight: bold;
+    font-size: 13px;
+    color: white; 
+    letter-spacing: 0.5px;
+    margin-bottom: 4%
+}
+
+#acct {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* justify-items: center; */
+    margin-top: 5%;
+}
+
+#col1 {
+    display: grid;
+    grid-template-rows: 50% 50%; 
+    /* justify-items: center; */
+}
+
+#itemStock, #itemPercentage {
+    font-family: "Futura";
+    color: white;
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+#itemPercentage {
+    justify-self: right;
+}
+
+#row2 {
+    font-family: "Futura";
+    color: white;
+    font-size: 13px; 
+    /* margin-right:35px; */
+}
