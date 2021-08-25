@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-top5-lists',
@@ -11,6 +11,8 @@ export class Top5ListsComponent implements OnInit {
 
   gain = "Top 5 Gainers";
   loss = "Top 5 Losers";
+
+  @Output() 
   ngOnInit(): void {
   }
 
