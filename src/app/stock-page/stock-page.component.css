@@ -1,0 +1,49 @@
+#headerWrapper {
+    background-color: #f3b55f;
+    background-image: linear-gradient(to top right, #E38334, #FFCE70);
+    height: 18vh;
+}
+
+#header {
+    margin: 0% 5% 0% 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+}
+
+#logo, #stockPageTitle, #col2 {
+    font-family: 'Futura';
+    color: white;
+}
+
+#stockPageTitle {
+    font-weight: bold;
+    font-size: 27px;
+}
+
+#col1 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    align-self: center;
+    height: 80%;
+}
+
+#col2 {
+    justify-self: right;
+}
+
+#exitButton{
+    border-width: 0;
+    background-color: #D47E23;
+    font-family: "Futura";
+    color: white;
+    font-size: 10px;
+    padding: 10px 12px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    margin-top: 20%;
+}
+
+#exitButton:hover {
+    background-color: #BC7020; /* Green */
+}
