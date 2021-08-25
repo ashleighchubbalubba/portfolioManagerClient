@@ -6,15 +6,25 @@
     grid-template-rows: 47% 1% 47% 5%;
 }
 
-/* #accountContent {
-
-    height: 100%;
-    margin-left: 5%;
-} */
-
-#cash, #investment {
+#cash, #investment, #netWorth {
     margin-left: 10%;
     margin-right:10%
+}
+
+#netWorth {
+    display: grid;
+    grid-template-columns: 50% 50%;  
+}
+
+#netWorthLabel, #netWorthValue {
+    font-family: "Futura";
+    font-weight: bold;
+    font-size: 14px;
+    color: #9B4B00;
+}
+
+#netWorthValue {
+    justify-self: right;
 }
 
 hr {
