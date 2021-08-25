@@ -1,5 +1,26 @@
 #accounts {
     background-color: #f3b55f;
-    background-image: linear-gradient(to top right, #D66700, #FED366);
+    background-image: linear-gradient(to top right, #E38334, #FFCE70);
     height: 100%;
+    display: grid;
+    grid-template-rows: 47% 1% 47% 5%;
+}
+
+/* #accountContent {
+
+    height: 100%;
+    margin-left: 5%;
+} */
+
+#cash, #investment {
+    margin-left: 10%;
+    margin-right:10%
+}
+
+hr {
+    width: 100%;
+    margin-left:0;
+    border: none;
+    background-color:white;
+    height: 2px;
 }

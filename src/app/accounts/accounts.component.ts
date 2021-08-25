@@ -9,6 +9,9 @@ export class AccountsComponent implements OnInit {
 
   constructor() { }
 
+  cash = "CASH";
+  investment = "INVESTMENT";
+
   ngOnInit(): void {
   }
 
