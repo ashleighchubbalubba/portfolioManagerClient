@@ -1,7 +1,11 @@
+#wholePage {
+    height: 100vh;
+}
+
 #headerWrapper {
     background-color: #f3b55f;
     background-image: linear-gradient(to top right, #E38334, #FFCE70);
-    height: 18vh;
+    height: 18%;
 }
 
 #header {
@@ -46,4 +50,52 @@
 
 #exitButton:hover {
     background-color: #BC7020; /* Green */
+}
+
+#stockTable {
+    margin: 2% 5% 2% 5%;
+    height:75%;
+}
+
+#table {
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    /* width: 20%; */
+    margin-top: 20%;
+}
+
+td {
+    padding-top: 2.8%;
+}
+
+/* hr {
+    width: 100vh;
+    margin-top:10px;
+    border: none;
+    background-color: #cccccc;
+    height: 2px;
+} */
+
+
+#tableHeader {
+    font-family: 'Futura';
+    font-weight: bold;
+    font-size: 20px;
+    width: 25%;
+}
+
+#tableHeaderL {
+    font-family: 'Futura';
+    font-weight: bold;
+    font-size: 20px;
+    width: 16%;
+}
+
+#tableValue {
+    font-family: 'Futura';
+    font-size: 15px;
+    font-weight: 300;
 }
