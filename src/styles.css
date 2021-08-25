@@ -2,3 +2,7 @@
     font-family: "Futura";
     src: local("Futura"), url(./assets/fonts/futur.ttf) format("truetype");
 }
+
+body {
+    margin: 0;
+}
