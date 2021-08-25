@@ -1,0 +1,47 @@
+#list {
+    height: 100%;
+}
+
+#listTitle {
+    font-family: "Futura";
+    font-weight: bold;
+    font-size: 27px;
+    color: #FFAC2F;
+}
+
+hr {
+    width: 345px;
+    margin-left:0;
+    margin-top:10px;
+    border: none;
+    background-color: #cccccc;
+    height: 2px;
+}
+
+#listOfItems {
+    margin-top: 3%;
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-row-gap: 13%;
+}
+
+#item {
+    display: grid;
+    grid-template-columns: 57% 43%;
+}
+
+#itemStock {
+    font-family: "Futura";
+}
+
+#itemPercentage {
+    font-family: "Futura";
+}
+
+.gainclass {
+    color: #479A06;
+}
+
+.lossclass {
+    color: #A31A1A;
+}
