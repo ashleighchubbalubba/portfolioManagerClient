@@ -31,7 +31,8 @@ export class AccountsComponent implements OnInit {
     let todayString = "";
     todayString = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
     
-    this.http.get('http://localhost:8080/getAccounts').subscribe((res:any) => {
+    this.http.get('http://stockportfoliomanager-stockportfoliomanager.namdevops14.conygre.com/getAccounts').subscribe((res:any) => {
+      console.log(res)
       for (let el of res){
         // console.log(el["date"]);
         let splitObject = el["date"].split('T');
