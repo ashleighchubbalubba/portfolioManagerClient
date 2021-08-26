@@ -30,7 +30,7 @@ export class OverviewComponent implements OnInit {
 
     console.log(todayString);
 
-    this.http.get('http://localhost:8080/getAccounts').subscribe((res:any) => {
+    this.http.get('http://stockportfoliomanager-stockportfoliomanager.namdevops14.conygre.com/getAccounts').subscribe((res:any) => {
       for (let el of res){
         let splitObject = el["date"].split('T');
         el["date"] = splitObject[0];
