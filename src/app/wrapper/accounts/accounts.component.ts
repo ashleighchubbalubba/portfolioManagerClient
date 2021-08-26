@@ -38,11 +38,12 @@ export class AccountsComponent implements OnInit {
         let splitObject = el["date"].split('T');
         // console.log(splitObject[0]);
         el["date"] = splitObject[0];
-        if(el["date"] == todayString && el["type"] == "Cash"){
+        if(el["date"] == todayString && (el["type"] == "Cash Management" || el["type"] == "Checking" || el["type"] == "Savings")){
           this.todaysCashBanks.push(el);
         }
-        else if(el["date"] == todayString && el["type"] == "Investment"){
+        else if(el["date"] == todayString && (el["type"] == "Roth IRA" || el["type"] == "Fidelity Brokerage" || el["type"] == "Retirement Account" || el["type"] == "Bond Portfolio")){
           this.todaysInvestBanks.push(el);
+          console.log(todayString)
         }
       }  
 

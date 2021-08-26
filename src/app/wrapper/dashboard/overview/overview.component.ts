@@ -36,11 +36,12 @@ export class OverviewComponent implements OnInit {
         el["date"] = splitObject[0];
 
 
-        if(el["date"] == todayString && el["type"] == "Cash"){
+        if(el["date"] == todayString && (el["type"] == "Cash Management" || el["type"] == "Checking" || el["type"] == "Savings")){
           this.todaysCashBanks.push(el);
         }
-        else if(el["date"] == todayString && el["type"] == "Investment"){
+        else if(el["date"] == todayString && (el["type"] == "Roth IRA" || el["type"] == "Fidelity Brokerage" || el["type"] == "Retirement Account" || el["type"] == "Bond Portfolio")){
           this.todaysInvestBanks.push(el);
+          console.log(todayString)
         }
       }  
       this.totalCashValue = this.todaysCashBanks.reduce((total:any, elem:any) => {
