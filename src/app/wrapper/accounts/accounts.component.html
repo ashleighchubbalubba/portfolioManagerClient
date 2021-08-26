@@ -1,7 +1,7 @@
 <article id = "accounts">
-    <app-acct [accountType] = "cash" id = "cash"></app-acct>
+    <app-acct [totalValue] = "totalCashValue" [accountType] = "cash" [todaysBanks] = "todaysCashBanks" id = "cash"></app-acct>
     <hr>
-    <app-acct [accountType] = "investment" id = "investment"></app-acct>
+    <app-acct [totalValue] = "totalInvestValue" [accountType] = "investment" [todaysBanks] = "todaysInvestBanks" id = "investment"></app-acct>
     <div id = "netWorth">
         <div id = "netWorthLabel">NET WORTH</div>
         <div id = "netWorthValue">$56,045,103.23</div>

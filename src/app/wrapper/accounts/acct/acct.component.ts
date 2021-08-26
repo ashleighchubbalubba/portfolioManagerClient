@@ -7,6 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AcctComponent implements OnInit {
   @Input() accountType:String="";
+  @Input() todaysBanks:any[] = [];
+  @Input() totalValue:number = 0;
+
+
+
+
 
   constructor() { }
 
