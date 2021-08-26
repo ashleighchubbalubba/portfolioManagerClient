@@ -12,6 +12,7 @@ import { AccountsComponent } from './wrapper/accounts/accounts.component';
 import { ListComponent } from './wrapper/dashboard/top5-lists/list/list.component';
 import { AcctComponent } from './wrapper/accounts/acct/acct.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
+import {HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { WrapperComponent } from './wrapper/wrapper.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
