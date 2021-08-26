@@ -1,0 +1,173 @@
+// wfc1 = { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '1/21/2021' }
+// cof1 = { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '1/21/2021' }
+// citi1 = { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '1/21/2021' }
+// citi2 = { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '1/22/2021' }
+// citi3 = { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '1/23/2021' }
+// wfc2 = { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '1/24/2021' }
+// san1 = { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '1/25/2021' }
+// bac2 = { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '1/26/2021' }
+// cof2 = { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '1/27/2021' }
+// citi4 = { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '1/28/2021' }
+// citi5 = { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '1/29/2021' }
+// san2 = { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '1/30/2021' }
+
+accounts = [
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '1/21/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '1/21/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '1/21/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '1/22/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '1/23/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '1/24/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '1/25/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '1/26/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '1/27/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '1/28/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '1/29/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '1/30/2021' },
+    
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '1/31/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '2/1/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '2/2/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '2/3/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '2/4/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '2/5/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '2/6/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '2/7/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '2/8/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '2/9/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '2/10/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '2/11/2021' },
+
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '2/12/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '2/13/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '2/14/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '2/15/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '2/16/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '2/17/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '2/18/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '2/19/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '2/20/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '2/21/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '2/22/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '2/23/2021' },
+
+    // start here
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '2/23/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '2/23/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '2/24/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '2/24/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '2/25/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '2/26/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '2/27/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '2/28/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '2/29/2021' },
+
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '3/1/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '3/2/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '3/3/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '3/4/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '3/5/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '3/6/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '3/7/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '3/8/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '3/9/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '3/10/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '3/11/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '3/12/2021' },
+
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '3/13/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '3/13/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '3/13/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '3/13/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '3/14/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '3/15/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '3/16/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '3/17/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '3/18/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '3/19/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '3/20/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '3/21/2021' },
+
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '3/22/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '3/23/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '3/24/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '3/25/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '3/26/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '3/27/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '3/28/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '3/29/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '3/30/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '3/31/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '4/1/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '4/1/2021' },
+
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '4/2/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '4/3/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '4/4/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '4/5/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '4/6/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '4/7/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '4/8/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '4/9/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '4/10/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '4/11/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '4/12/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '4/13/2021' },
+
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '4/14/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '4/15/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '4/16/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '4/17/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '4/18/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '4/19/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '4/20/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '4/21/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '4/22/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '4/23/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '4/24/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '4/25/2021' },
+
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '4/26/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '4/27/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '4/28/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '4/29/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '4/30/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '5/1/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '5/2/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '5/3/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '5/4/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '5/4/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '5/5/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '5/6/2021' },
+
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '5/7/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '5/8/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '5/9/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '5/10/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '5/11/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '5/12/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '5/13/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '5/14/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '5/15/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '5/16/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '5/17/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '5/18/2021' },
+
+    { accountNumber: '1', bank: 'Wells Fargo', type: 'Investment', balance: 1306279, date: '6/19/2021' },
+    { accountNumber: '2', bank: 'Capital One', type: 'Cash', balance: 4442876, date: '6/20/2021' },
+    { accountNumber: '3', bank: 'Citibank', type: 'Cash', balance: 1109089, date: '6/21/2021' },
+    { accountNumber: '4', bank: 'Citibank', type: 'Cash', balance: 2242918, date: '6/22/2021' },
+    { accountNumber: '5', bank: 'Citibank', type: 'Investment', balance: 1614534, date: '6/23/2021' },
+    { accountNumber: '6', bank: 'Wells Fargo', type: 'Cash', balance: 1518397, date: '6/24/2021' },
+    { accountNumber: '7', bank: 'Santander', type: 'Investment', balance: 4679359, date: '6/25/2021' },
+    { accountNumber: '8', bank: 'Bank of America', type: 'Cash', balance: 1518737, date: '6/26/2021' },
+    { accountNumber: '9', bank: 'Capital One', type: 'Investment', balance: 2432584, date: '6/27/2021' },
+    { accountNumber: '10', bank: 'Citibank', type: 'Investment', balance: 864496, date: '6/28/2021' },
+    { accountNumber: '11', bank: 'Citibank', type: 'Investment', balance: 1523774, date: '6/29/2021' },
+    { accountNumber: '12', bank: 'Santander', type: 'Cash', balance: 1447935, date: '6/30/2021' }
+
+   
+]
+
+
+

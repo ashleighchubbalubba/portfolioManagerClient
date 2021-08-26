@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph of Net Worth</title>
+  </head>
+  <body>
+    <div id="chartReport" style="position: relative; height:20vh; width:80vw">
+        <button onClick="generateChartLastWeek()">Last Week Chart</button>
+        <button onClick="generateChartLastMonth()">Last Month Chart</button>
+        <button onClick="generateChartLastQuarter()">Last Quarter Chart</button>
+        <button onClick="generateChartYearToDate()">Last Year Chart</button>
+        <canvas id="myChart"></canvas>
+        <!-- <canvas id="myChart2"></canvas> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="mock_data.js"></script>
+    <script src="stock_chart.js"></script>
+  </body>
+</html>
