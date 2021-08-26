@@ -1,5 +1,3 @@
-
-
 networth = []
 finalNetWorth = []
 datesForYear = [] // this will be filled with Date objects
@@ -8,17 +6,6 @@ uniqueDatesAsLabels = []
 listCashValues = []
 listInvestmentValues = []
 listNetWorthValues = []
-
-// http://stockportfoliomanager-stockportfoliomanager.namdevops14.conygre.com/getAccounts
-// const api_get_accounts = 'http://localhost:8080/getAccounts'
-// const response = fetch(api_get_accounts).then(function(response) {
-//   accounts = response.json();
-//   console.log(accounts)
-// })
-// .catch(function(error) {
-//   console.log('Looks like there was a problem: \n', error);
-// });
-
 
 // WORKING CORRECTLY
 function generateDatesForYear()
@@ -34,13 +21,51 @@ function generateDatesForYear()
                 // if (month != 2 && !(days > 29 && days <= 31))
                 {
                     datesForYear.push(new Date(years[0], months[month], days[day]))
-                    stringDatesForYear.push(months[month] + '/' + days[day] + '/' + years[0])
+                    tempDate = '' + years[0] + '-'
+
+                    // if month is between 1 and 9, we append a 0 before it
+                    if (months[month] > 0 && months[month] < 10)
+                    {
+                        tempDate = tempDate + '0' + months[month] + '-';
+
+                        // if day is between 1 and 9, we append a 0 before it
+                        if (days[day] > 0 && days[day] < 10)
+                        {
+                            tempDate = tempDate + '0' + days[day];
+                        }
+
+                        // if day is between 10 and 31, we do not append a 0 before it
+                        else
+                        {
+                            tempDate = tempDate + days[day];
+                        }
+                    }
+                    // if month is between 10 and 12, we do not append a 0 before it
+                    else
+                    {
+                        tempDate = tempDate + months[month] + '-';
+
+                        // if day is between 1 and 9, we append a 0 before it
+                        if (days[day] > 0 && days[day] < 10)
+                        {
+                            tempDate = tempDate + '0' + days[day];
+                        }
+
+                        // if day is between 10 and 31, we do not append a 0 before it
+                        else
+                        {
+                            tempDate = tempDate + days[day];
+                        }
+                    }
+                    
+                    stringDatesForYear.push(tempDate)
                 }
         }
     }
 }
 
 generateDatesForYear()
+console.log(stringDatesForYear)
 
 function generateNetWorthObjects()
 {

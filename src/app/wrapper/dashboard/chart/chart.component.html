@@ -1,10 +1,13 @@
 <article id = "chart">
     <div id = "buttonsAndLegends">
         <div id = "buttons">
-            <button id = "button">LAST WEEK</button>
-            <button id = "button">LAST MONTH</button>
-            <button id = "button">LAST QUARTER</button>
-            <button id = "button">YEAR TO DATE</button>
+            <!--
+            <button (click)="generateChartLastWeek()" id = "button">LAST WEEK</button>
+            <button (click)="generateChartLastMonth()" id = "button">LAST MONTH</button>
+            <button (click)="generateChartLastQuarter()" id = "button">LAST QUARTER</button>
+            <button (click)="generateChartYearToDate()" id = "button">YEAR TO DATE</button>
+
+            -->
         </div>
         <div id = "legends">
             <div id = "legendWrappers">
@@ -21,5 +24,7 @@
             </div>
         </div>
     </div>
-    <div id = "graph"></div>
+    <div id="chartReport" style="position: relative; height: 20vh; width: 80vw">
+        <canvas id="myChart"></canvas>
+    </div>
 </article>
