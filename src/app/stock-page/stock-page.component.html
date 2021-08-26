@@ -10,86 +10,25 @@
     </div>
     <div id = "stockTable">
         <table id = "table">
-            <tr>
-                <th id = "tableHeader">Ticker</th>
-                <th id = "tableHeader">Date</th>
-                <th id = "tableHeader">Purchase Price</th>
-                <th id = "tableHeader">Current Price</th>
-                <th id = "tableHeader">Amount</th>
-                <th id = "tableHeader">Gain/Loss</th>
-            </tr>
-            <tr>
-                <td id = "tableValue">APPL</td>
-                <td id = "tableValue">2021-04-23</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">12</td>
-                <td id = "tableValue">%3.45</td>
-            </tr>
-            <tr>
-                <td id = "tableValue">APPL</td>
-                <td id = "tableValue">2021-04-23</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">12</td>
-                <td id = "tableValue">%3.45</td>
-            </tr>
-            <tr>
-                <td id = "tableValue">APPL</td>
-                <td id = "tableValue">2021-04-23</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">12</td>
-                <td id = "tableValue">%3.45</td>
-            </tr>
-            <tr>
-                <td id = "tableValue">APPL</td>
-                <td id = "tableValue">2021-04-23</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">12</td>
-                <td id = "tableValue">%3.45</td>
-            </tr>
-            <tr>
-                <td id = "tableValue">APPL</td>
-                <td id = "tableValue">2021-04-23</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">12</td>
-                <td id = "tableValue">%3.45</td>
-            </tr>
-            <tr>
-                <td id = "tableValue">APPL</td>
-                <td id = "tableValue">2021-04-23</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">12</td>
-                <td id = "tableValue">%3.45</td>
-            </tr>
-            <tr>
-                <td id = "tableValue">APPL</td>
-                <td id = "tableValue">2021-04-23</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">12</td>
-                <td id = "tableValue">%3.45</td>
-            </tr>
-            <tr>
-                <td id = "tableValue">APPL</td>
-                <td id = "tableValue">2021-04-23</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">12</td>
-                <td id = "tableValue">%3.45</td>
-            </tr>
-            <tr>
-                <td id = "tableValue">APPL</td>
-                <td id = "tableValue">2021-04-23</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">$34.56</td>
-                <td id = "tableValue">12</td>
-                <td id = "tableValue">%3.45</td>
-            </tr>
+                <tr>
+                    <th id = "tableHeader">Ticker</th>
+                    <th id = "tableHeader">Date</th>
+                    <th id = "tableHeader">Purchase Price</th>
+                    <th id = "tableHeader">Current Price</th>
+                    <th id = "tableHeader">Amount</th>
+                    <th id = "tableHeader">Gain/Loss</th>
+                </tr>
+
+            <ng-container *ngFor= "let stock of allStocks">
+                <tr>
+                    <td id = "tableValue">{{stock.ticker}}</td>
+                    <td id = "tableValue">{{stock.date}}</td>
+                    <td id = "tableValue">{{stock["Purchase Price"]}}</td>
+                    <td id = "tableValue">{{stock["Current Price" ]}}</td>
+                    <td id = "tableValue">{{stock["amount"]}}</td>
+                    <td id = "tableValue">{{stock["Gain/Loss"]}}</td>
+                </tr>
+            </ng-container>
         </table>
     </div>
 </article>

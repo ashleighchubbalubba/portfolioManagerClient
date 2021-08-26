@@ -22,4 +22,17 @@ describe('StockPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should run ngoninit", () => {
+    expect(component.ngOnInit).toHaveBeenCalled();
+  })
+
+  it("should test the getAllMethod", () => {
+    //spy basically watches component to see if getAllSTocks is ever called
+    let spy = spyOn(component, "getAllStocks");
+    //This calls getAllSTocks
+    component.getAllStocks();
+    //this is a test that returns true or false if the spy ever caught getallstocks being called
+    expect(spy).toHaveBeenCalled();
+  })
 });
