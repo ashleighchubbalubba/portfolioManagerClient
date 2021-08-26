@@ -84,14 +84,7 @@ td {
     font-family: 'Futura';
     font-weight: bold;
     font-size: 20px;
-    width: 25%;
-}
-
-#tableHeaderL {
-    font-family: 'Futura';
-    font-weight: bold;
-    font-size: 20px;
-    width: 16%;
+    width: 20%;
 }
 
 #tableValue {
