@@ -120,7 +120,7 @@ export class ChartComponent{
   changeScope(scope:number){
     this.scope = scope;
     this.formatForChart();
-    console.log("grblakjgan");
+    // console.log("grblakjgan");
 
     this.refresh = false;
     setTimeout(() => {
@@ -144,7 +144,7 @@ export class ChartComponent{
       for(let i = 164; i >= 165 - this.scope; i--){
         let parts = iterable[i].split('-');
         let mydate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2])); 
-        console.log(this.scope);
+        // console.log(this.scope);
         let tempObject = {"name": mydate, "value": this.accountCashMap[iterable[i]]};
         cash["series"].push(tempObject);
       }
@@ -164,7 +164,7 @@ export class ChartComponent{
       this.dataForChart.push(cash);
       this.dataForChart.push(invest);
       this.dataForChart.push(netWorth);
-      console.log(this.dataForChart);
+      // console.log(this.dataForChart);
       // multi = this.dataForChart;
     }, 1500)
   }
@@ -184,16 +184,19 @@ export class ChartComponent{
       for(let item of res){
         if(item["type"] == "Cash Management" || item["type"] == "Checking" || item["type"] == "Savings"
         ){
-          if(cashMap[item[""]] == true){
-            cashMap[item["date"]] + item["balance"];
+          if(cashMap[item["date"]]){
+            // console.log(item["date"]);
+            cashMap[item["date"]] += item["balance"];
+            // console.log("/n");
+            // console.log(item["date"]);
           }
           else{
             cashMap[item["date"]] = item["balance"];
           }
         }
         else{
-          if(investMap[item[""]] == true){
-            investMap[item["date"]] + item["balance"];
+          if(investMap[item["date"]]){
+            investMap[item["date"]] += item["balance"];
           }
           else{
             investMap[item["date"]] = item["balance"];
