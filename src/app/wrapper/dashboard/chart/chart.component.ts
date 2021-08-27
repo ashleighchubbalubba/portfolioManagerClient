@@ -141,21 +141,21 @@ export class ChartComponent{
       netWorth["name"] = "Net Worth";
       netWorth["series"] = [];
       let iterable = Object.keys(this.accountCashMap);
-      for(let i = 0; i < this.scope; i++){
+      for(let i = 164; i >= 165 - this.scope; i--){
         let parts = iterable[i].split('-');
         let mydate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2])); 
         console.log(this.scope);
         let tempObject = {"name": mydate, "value": this.accountCashMap[iterable[i]]};
         cash["series"].push(tempObject);
       }
-      for(let i = 0; i < this.scope; i++){
+      for(let i = 164; i >= 165 - this.scope; i--){
         let parts = iterable[i].split('-');
         let mydate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2])); 
         // console.log(mydate.toDateString());
         let tempObject = {"name": mydate, "value": this.accountInvestMap[iterable[i]]};
         invest["series"].push(tempObject);
       }
-      for(let i = 0; i < this.scope; i++){
+      for(let i = 164; i >= 165 - this.scope; i--){
         let parts = iterable[i].split('-');
         let mydate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2])); 
         let tempObject = {"name": mydate, "value": this.accountCashMap[iterable[i]] + this.accountInvestMap[iterable[i]]};
