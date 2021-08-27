@@ -152,7 +152,7 @@ export class ChartComponent{
       this.dataForChart.push(netWorth);
       console.log(this.dataForChart);
       // multi = this.dataForChart;
-    }, 2500)
+    }, 2000)
   }
 
   getAccountInfo(){

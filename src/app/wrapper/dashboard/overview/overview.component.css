@@ -30,21 +30,21 @@
 
 #valueNetWorth {
     font-family: "Futura";
-    color: #94B253;
+    color: #c8b3ca;
     font-weight: bold;
     font-size: 45px;
 }
 
 #valueCash {
     font-family: "Futura";
-    color: #516B9D;
+    color: #a7385d;
     font-weight: bold;
     font-size: 25px;
 }
 
 #valueInvestment {
     font-family: "Futura";
-    color: #8BC0DE;
+    color: #7aa3e5;
     font-weight: bold;
     font-size: 25px;
 }
