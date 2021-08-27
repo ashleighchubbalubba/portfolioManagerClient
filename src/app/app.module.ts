@@ -13,6 +13,10 @@ import { ListComponent } from './wrapper/dashboard/top5-lists/list/list.componen
 import { AcctComponent } from './wrapper/accounts/acct/acct.component';
 import { WrapperComponent } from './wrapper/wrapper.component';
 import {HttpClientModule } from '@angular/common/http';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ import {HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

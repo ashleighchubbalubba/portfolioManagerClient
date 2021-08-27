@@ -1,4 +1,4 @@
-<article id = "chart">
+<!-- <article id = "chart">
     <div id = "buttonsAndLegends">
         <div id = "buttons">
             <button id = "button">LAST WEEK</button>
@@ -22,4 +22,18 @@
         </div>
     </div>
     <div id = "graph"></div>
-</article>
+</article> -->
+
+<ngx-charts-bar-vertical 
+    [view]="[1000,400]"
+    [results]="saleData"
+    [xAxisLabel]="'Products'"
+    [legendTitle]="'Product Sale Chart'"
+    [yAxisLabel]="'Sale'"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxis]="true"
+    [yAxis]="true"
+    [gradient]="true">
+</ngx-charts-bar-vertical>
