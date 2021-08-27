@@ -12,9 +12,7 @@ export class StockPageComponent implements OnInit {
   allStocks:any[] = [];
   cleanStocks:any[] = [];
   apiLink:string = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=";
-  apiKey:string = "&apikey=XDU4MTLMOVFV7611";
-  apiKey2:string = '&apikey=32OKSTNICZCDFV0A';
-  switchKeys:boolean = true;
+  apiKey:string = "&apikey=DB9O2N661D4VQ77Z";
 
   ngOnInit(): void {
     this.getAllStocks();
@@ -41,19 +39,9 @@ export class StockPageComponent implements OnInit {
         length--;
       }
       // console.log(this.allStocks);
-      this.allStocks
       for(let stock of this.allStocks){
-        let key = '';
-        if(this.switchKeys){
-          key = this.apiKey;
-        }
-        else{
-          key = this.apiKey2;
-        }
-        this.switchKeys = !this.switchKeys;
         // console.log(stock);
-
-        this.http.get(this.apiLink + stock.ticker + key).subscribe((stock2:any) => {
+        this.http.get(this.apiLink + stock.ticker + this.apiKey).subscribe((stock2:any) => {
           console.log(stock2);
           // console.log(stock2["Time Series (Daily)"][stock["date"]]["4. close"]);
           setTimeout(() => {
@@ -61,7 +49,7 @@ export class StockPageComponent implements OnInit {
            stock["Current Price"] = stock2["Time Series (Daily)"][todayString]["4. close"];
 
            stock['Gain/Loss'] = (stock["Current Price"] - stock["Purchase Price"]) / stock["Purchase Price"];
-          }, 5000)
+          }, 1)
           // console.log(todayString);
         })
       }
