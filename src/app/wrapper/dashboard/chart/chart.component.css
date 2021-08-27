@@ -1,6 +1,16 @@
+#chart {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15% 85%;
+}
+
 #buttonsAndLegends {
     display: grid;
     grid-template-columns: 60% 40%;
+}
+
+#graph{
+    /* padding-top: 4%; */
 }
 
 #buttons{
@@ -60,4 +70,8 @@
 #legendName {
     font-family: "Futura";
 
+}
+
+.timeline .embedded-chart {
+    opacity: 100;
 }
