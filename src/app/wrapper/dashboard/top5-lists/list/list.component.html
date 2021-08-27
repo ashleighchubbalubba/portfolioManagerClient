@@ -2,9 +2,20 @@
     <div id = "listTitle">{{title}}</div>
     <hr>
     <div id = "listOfItems">
+        <ng-container *ngFor= "let percentage of top5list">
+            <div id = "item">
+                <div id = "itemStock">{{percentage.ticker}}</div>
+                <div [ngClass] = "{ 'gainclass':isGain, 'lossclass':!(isGain) }" id = "itemPercentage">{{percentage.percent}}%</div>
+            </div>
+        </ng-container>
+
+        <!-- <div id = "item">
+            <div id = "itemStock">Chuck's Bikes</div>
+            <div id = "itemPercentage">2.53%</div>
+        </div>
         <div id = "item">
             <div id = "itemStock">Chuck's Bikes</div>
-            <div [ngClass] = "{ 'gainclass':isGain, 'lossclass':!(isGain) }" id = "itemPercentage">2.53%</div>
+            <div id = "itemPercentage">2.53%</div>
         </div>
         <div id = "item">
             <div id = "itemStock">Chuck's Bikes</div>
@@ -13,14 +24,6 @@
         <div id = "item">
             <div id = "itemStock">Chuck's Bikes</div>
             <div id = "itemPercentage">2.53%</div>
-        </div>
-        <div id = "item">
-            <div id = "itemStock">Chuck's Bikes</div>
-            <div id = "itemPercentage">2.53%</div>
-        </div>
-        <div id = "item">
-            <div id = "itemStock">Chuck's Bikes</div>
-            <div id = "itemPercentage">2.53%</div>
-        </div>
+        </div> -->
     </div>
 </article>
