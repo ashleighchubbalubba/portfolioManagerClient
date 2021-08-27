@@ -1,10 +1,10 @@
 <article id = "chart">
     <div id = "buttonsAndLegends">
         <div id = "buttons">
-            <button id = "button">LAST WEEK</button>
-            <button id = "button">LAST MONTH</button>
-            <button id = "button">LAST QUARTER</button>
-            <button id = "button">YEAR TO DATE</button>
+            <button id = "button" (click) = "changeScope(7)">LAST WEEK</button>
+            <button id = "button" (click) = "changeScope(30)">LAST MONTH</button>
+            <button id = "button" (click) = "changeScope(90)">LAST QUARTER</button>
+            <button id = "button" (click) = "changeScope(165)">YEAR TO DATE</button>
         </div>
         <div id = "legends">
             <div id = "legendWrappers">
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div *ngIf="dataForChart.length != 0" id = "graph">
+    <div *ngIf="dataForChart.length != 0 && refresh" id = "graph">
         <ngx-charts-line-chart
             [legend]="legend"
             [showXAxisLabel]="showXAxisLabel"

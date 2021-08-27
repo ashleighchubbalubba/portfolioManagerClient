@@ -100,6 +100,8 @@ export class ChartComponent{
   networth:any = 0;
   cashValue:any =0;
   investmentValue:any =0;
+  scope:any = 165;
+  refresh:boolean = true;
 
   constructor(private http:HttpClient) { 
     // Object.assign(this, { this.dataForChart });
@@ -115,7 +117,19 @@ export class ChartComponent{
     this.formatForChart();
   }
 
+  changeScope(scope:number){
+    this.scope = scope;
+    this.formatForChart();
+    console.log("grblakjgan");
+
+    this.refresh = false;
+    setTimeout(() => {
+      this.refresh = true;
+    }, 50)
+  }
+
   formatForChart(){
+    this.dataForChart = [];
     setTimeout(() => {
       let cash:any = {};
       let invest:any = {};
@@ -127,21 +141,21 @@ export class ChartComponent{
       netWorth["name"] = "Net Worth";
       netWorth["series"] = [];
       let iterable = Object.keys(this.accountCashMap);
-      for(let i = 0; i < iterable.length; i++){
+      for(let i = 0; i < this.scope; i++){
         let parts = iterable[i].split('-');
         let mydate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2])); 
-        // console.log(mydate.toDateString());
+        console.log(this.scope);
         let tempObject = {"name": mydate, "value": this.accountCashMap[iterable[i]]};
         cash["series"].push(tempObject);
       }
-      for(let i = 0; i < iterable.length; i++){
+      for(let i = 0; i < this.scope; i++){
         let parts = iterable[i].split('-');
         let mydate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2])); 
         // console.log(mydate.toDateString());
         let tempObject = {"name": mydate, "value": this.accountInvestMap[iterable[i]]};
         invest["series"].push(tempObject);
       }
-      for(let i = 0; i < iterable.length; i++){
+      for(let i = 0; i < this.scope; i++){
         let parts = iterable[i].split('-');
         let mydate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2])); 
         let tempObject = {"name": mydate, "value": this.accountCashMap[iterable[i]] + this.accountInvestMap[iterable[i]]};
@@ -152,7 +166,7 @@ export class ChartComponent{
       this.dataForChart.push(netWorth);
       console.log(this.dataForChart);
       // multi = this.dataForChart;
-    }, 2000)
+    }, 1500)
   }
 
   getAccountInfo(){
