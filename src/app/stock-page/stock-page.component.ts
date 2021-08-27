@@ -45,10 +45,11 @@ export class StockPageComponent implements OnInit {
           console.log(stock2);
           // console.log(stock2["Time Series (Daily)"][stock["date"]]["4. close"]);
           setTimeout(() => {
-            stock["Purchase Price"] =  stock2["Time Series (Daily)"][stock["date"]]["4. close"];
-           stock["Current Price"] = stock2["Time Series (Daily)"][todayString]["4. close"];
-
-           stock['Gain/Loss'] = (stock["Current Price"] - stock["Purchase Price"]) / stock["Purchase Price"];
+            let purchasePrice = stock2["Time Series (Daily)"][stock["date"]]["4. close"];
+            let currentPrice = stock2["Time Series (Daily)"][todayString]["4. close"];
+            stock["Purchase Price"] =  "$" + parseFloat(purchasePrice).toFixed(2);
+           stock["Current Price"] = "$" + parseFloat(currentPrice).toFixed(2);
+           stock['Gain/Loss'] = ((currentPrice - purchasePrice) / purchasePrice).toFixed(2) + "%";
           }, 1)
           // console.log(todayString);
         })

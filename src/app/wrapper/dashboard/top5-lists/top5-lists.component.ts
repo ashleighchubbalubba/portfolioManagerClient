@@ -13,8 +13,10 @@ export class Top5ListsComponent implements OnInit {
   cleanStocks:any[] = [];
   apiLink:string = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=";
   apiKey:string = "&apikey=DB9O2N661D4VQ77Z";
-  fruits = [{name: 'Ashleigh', num: 0.1390582305}, {name: 'bubby', num: -0.45}, {name: 'chubby', num: 0.24}];
-  percentages:any[] = [];
+
+  top5Gainers:any[] = [];
+  top5Losers:any[] = [];
+
 
   gain = "Top 5 Gainers";
   loss = "Top 5 Losers";
@@ -35,50 +37,33 @@ export class Top5ListsComponent implements OnInit {
         let randomIndex = Math.floor(Math.random() * length);
         portfolio[randomIndex]["date"]
         let splitObject = portfolio[randomIndex]["date"].split('T');
-        // console.log(splitObject[0]);
         portfolio[randomIndex]["date"] = splitObject[0];
         this.allStocks.push(portfolio[randomIndex]);
         portfolio.splice(randomIndex, 1);
         length--;
       }
       for(let stock of this.allStocks){
-        // console.log(stock);
         this.http.get(this.apiLink + stock.ticker + this.apiKey).subscribe((stock2:any) => {
-          // console.log(stock2);
-          // console.log(stock2["Time Series (Daily)"][stock["date"]]["4. close"]);
           setTimeout(() => {
             let purchasePrice = stock2["Time Series (Daily)"][stock["date"]]["4. close"];
             let currentPrice = stock2["Time Series (Daily)"][todayString]["4. close"];
 
             stock['percent'] = (currentPrice - purchasePrice) / purchasePrice;
-            //  stock['percent'] = parseFloat(stock['percent'].toFixed(2));
-            console.log(stock['percent']);
-            
+            stock['percent'] = parseFloat(stock['percent'].toFixed(2));
+            this.allStocks.sort((a,b) => {return (a.percent - b.percent)})
+            let half = Math.ceil(this.allStocks.length / 2); 
+
+            this.top5Losers = this.allStocks.slice(0, half);
+            this.top5Gainers = this.allStocks.slice(-half).reverse();
+            console.log(this.top5Gainers);
+            console.log(this.top5Losers);
           }, 1)
-          // console.log(todayString);
         })
       }
-      
-      this.fruits.forEach(stock => this.percentages.push(stock.num));
-      console.log(this.percentages);
-      this.allStocks = this.allStocks.sort((a,b) => {return (a.percent - b.percent)})
-      this.fruits = this.fruits.sort((a,b) => {return (a.num - b.num)})
-      console.log(this.fruits);
-
-      // this.allStocks.sort((a, b) => a['Gain/Loss'] < b['Gain/Loss'] ? -1 : a['Gain/Loss'] > b['Gain/Loss'] ? 1 : 0)
-      // this.allStocks.sort(this.compare);
       console.log(this.allStocks);
+      console.log(this.top5Gainers);
+      console.log(this.top5Losers);
     })
   }
-
-  // compare( a:any,b:any ) {
-  //   if ( a['Gain/Loss'] < b['Gain/Loss'] ){
-  //     return -1;
-  //   }
-  //   if ( b['Gain/Loss'] < a['Gain/Loss'] ){
-  //     return 1;
-  //   }
-  //   return 0;
-  // }
 
 }

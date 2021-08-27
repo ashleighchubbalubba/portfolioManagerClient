@@ -10,6 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ListComponent implements OnInit {
   @Input() title:String="";
   @Input() isGain:boolean = false;
+  @Input() top5list:any[] = [];
 
   constructor() { }
 
